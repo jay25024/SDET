@@ -1,10 +1,4 @@
 //Author Jay Barot
-
-import static org.testng.Assert.assertEquals;
-
-import static org.testng.Assert.assertTrue;
-
-
 import java.util.ArrayList;
 
 import java.util.List;
@@ -13,8 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -23,15 +16,22 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class QA {
 	
 	
-	public static List<String> rowContentTable1Text ;
+	/*public static List<String> rowContentTable1Text ;
 	public static List<String> rowContentTable2Text ;
 	public static List<String> headerOrderTable1Text ;
 	public static List<String> headerOrderTable2Text ;
 	public static List<String> headerRowNumberTable1Text;
-	public static List<String> headerRowNumberTable2Text;
+	public static List<String> headerRowNumberTable2Text;*/
+	
 	WebDriver driver;
 	
-	@BeforeTest
+	public  QA() {
+		WebDriverManager.chromedriver().setup();
+		// initialize driver as chrome driver
+		driver = new ChromeDriver();
+	}
+	
+	/*@BeforeTest
 	private void initializeDriver() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -41,10 +41,40 @@ public class QA {
 		headerOrderTable2Text =  new ArrayList<>();
 		headerRowNumberTable1Text =  new ArrayList<>();
 	    headerRowNumberTable2Text =  new ArrayList<>();
+	}*/
+	
+	public List<String> webElementToString(List<WebElement> temp){
+		List<String> result = new ArrayList<>();
+		for(WebElement element : temp) {
+			result.add(element.getText());
+		}
+		return result;
+	}
+	
+	public List<String> contentTable1(){
+		driver.get("https://the-internet.herokuapp.com/tables");
+		List<WebElement> rowContentTable1 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
+		return this.webElementToString(rowContentTable1);
+	}
+	public List<String> contentTable2(){
+		driver.get("https://the-internet.herokuapp.com/tables");
+		List<WebElement> rowContentTable1 = driver.findElements(By.xpath("//table[@id='table2']/tbody/tr"));
+		return this.webElementToString(rowContentTable1);
+	}
+	
+	public List<String> headerTable1(){
+		driver.get("https://the-internet.herokuapp.com/tables");
+		List<WebElement> headerRowNumberTable1 = driver.findElements(By.xpath("//table[@id='table1']/thead/tr"));
+		return this.webElementToString(headerRowNumberTable1);
+	}
+	public List<String> headerTable2(){
+		driver.get("https://the-internet.herokuapp.com/tables");
+		List<WebElement> headerRowNumberTable2 = driver.findElements(By.xpath("//table[@id='table1']/thead/tr"));
+		return this.webElementToString(headerRowNumberTable2);
 	}
 	
 	
-	@Test
+	/*@Test
 	public void compareContent() {
 		boolean result = true;
 		List<WebElement> rowContentTable1 = driver.findElements(By.xpath("//table[@id='table1']/tbody/tr"));
@@ -88,8 +118,10 @@ public class QA {
 		}
 		assertTrue(result,"The order or content for the headings is not the same");
 	}
+	*/
 	
-	@Test
+	
+	/*@Test
 	public void compareHeaderNumber() {
 		driver.get("https://the-internet.herokuapp.com/tables");
 		List<WebElement> headerRowNumberTable1 = driver.findElements(By.xpath("//table[@id='table1']/thead/tr"));
@@ -120,6 +152,8 @@ public class QA {
 						
 		assertEquals(rowContentTable1Text,rowContentTable2Text,"Number of data rows in 2 tables is not the same");
 	}
+	*/
+	
 	/*public void readDatafromWEB()
 	{
 		

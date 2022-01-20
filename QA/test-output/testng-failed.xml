@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="QA">
+      <class name="QATest">
         <methods>
-          <include name="compareDataRowNumber"/>
           <include name="initializeDriver"/>
+          <include name="compareHeaderOrderAndContent"/>
         </methods>
-      </class> <!-- QA -->
+      </class> <!-- QATest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
