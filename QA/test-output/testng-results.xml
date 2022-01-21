@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-20T15:41:57 EST" name="Default suite" finished-at="2022-01-20T15:42:01 EST" duration-ms="4248">
+  <suite started-at="2022-01-21T16:54:26 EST" name="Default suite" finished-at="2022-01-21T16:54:29 EST" duration-ms="3325">
     <groups>
     </groups>
-    <test started-at="2022-01-20T15:41:57 EST" name="Default test" finished-at="2022-01-20T15:42:01 EST" duration-ms="4248">
-      <class name="QATest">
-        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:QATest@e056f20]" started-at="2022-01-20T15:41:57 EST" name="initializeDriver" finished-at="2022-01-20T15:41:59 EST" duration-ms="2557" status="PASS">
+    <test started-at="2022-01-21T16:54:26 EST" name="Default test" finished-at="2022-01-21T16:54:29 EST" duration-ms="3325">
+      <class name="QAUnitTest">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:QAUnitTest@57c758ac]" started-at="2022-01-21T16:54:26 EST" name="initializeDriver" finished-at="2022-01-21T16:54:27 EST" duration-ms="1867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method signature="compareContentAndRows()[pri:0, instance:QATest@e056f20]" started-at="2022-01-20T15:41:59 EST" name="compareContentAndRows" finished-at="2022-01-20T15:42:00 EST" duration-ms="1294" status="PASS">
+        <test-method signature="testGetHeaders()[pri:0, instance:QAUnitTest@57c758ac]" started-at="2022-01-21T16:54:27 EST" name="testGetHeaders" finished-at="2022-01-21T16:54:29 EST" duration-ms="1062" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- compareContentAndRows -->
-        <test-method signature="compareHeaderOrderAndColumnNumber()[pri:0, instance:QATest@e056f20]" started-at="2022-01-20T15:42:00 EST" name="compareHeaderOrderAndColumnNumber" finished-at="2022-01-20T15:42:01 EST" duration-ms="342" status="PASS">
+        </test-method> <!-- testGetHeaders -->
+        <test-method signature="testGetHeadersRow()[pri:0, instance:QAUnitTest@57c758ac]" started-at="2022-01-21T16:54:29 EST" name="testGetHeadersRow" finished-at="2022-01-21T16:54:29 EST" duration-ms="221" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- compareHeaderOrderAndColumnNumber -->
-      </class> <!-- QATest -->
+        </test-method> <!-- testGetHeadersRow -->
+        <test-method signature="testGetRow()[pri:0, instance:QAUnitTest@57c758ac]" started-at="2022-01-21T16:54:29 EST" name="testGetRow" finished-at="2022-01-21T16:54:29 EST" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRow -->
+        <test-method signature="testGetRows()[pri:0, instance:QAUnitTest@57c758ac]" started-at="2022-01-21T16:54:29 EST" name="testGetRows" finished-at="2022-01-21T16:54:29 EST" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRows -->
+      </class> <!-- QAUnitTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
